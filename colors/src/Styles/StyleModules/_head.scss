@@ -1,0 +1,10 @@
+.head_container{
+    background-color: $color-green;
+    @include flexdirectionStandard();
+    width: 100%;
+    height: 15vh;
+
+    .title{
+        color: $color-white;
+    }
+}

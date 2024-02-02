@@ -1,13 +1,19 @@
+
 //variables and funtions
+@import "./Functions/mixins";
 
 
 //base and layout
 
 
 //colors
+@import "./Variables/colors.scss";
 
 
 //components, button, card, navbar mm
-@import "./StyleModules/head.scss"
+@import "./StyleModules/_base.scss";
+@import "./StyleModules/_head.scss";
+@import "./StyleModules/_foot.scss";
+@import "./StyleModules/main.scss";
 
 //utilites

@@ -6,7 +6,7 @@ type HeadProps = {
 
 const Head = ({title}: HeadProps) => {
   return (
-    <div className='head'>
+    <div className='head_container'>
         <h1 className="title">{title}</h1>    
     </div>
   )
