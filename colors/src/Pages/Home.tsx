@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div>
-      <Head title="Home" />
+      <Head title="Välkommen till ColorPalette" />
       <Naven />
       <FetchColors onColorsFetched={handleColors} />
       <ul className="home_color">
