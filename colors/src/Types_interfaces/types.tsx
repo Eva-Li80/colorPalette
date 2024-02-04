@@ -11,3 +11,8 @@ export type SearchColorProps = {
 export type FootProps = {
     title: string;
 }
+
+export type ButtonProps = {
+    text: string;
+    onClick: () => void | boolean;
+}

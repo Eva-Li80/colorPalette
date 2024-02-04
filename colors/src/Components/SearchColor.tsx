@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { SearchColorProps } from "../Types_interfaces/types";
+import Button from "./Button";
 
 
 const SearchColor = ({ colors }: SearchColorProps) => {
@@ -34,7 +35,7 @@ const SearchColor = ({ colors }: SearchColorProps) => {
           onChange={(e) => setSearching(e.target.value)}
         />
       </div>
-      <button onClick={handleSearchClick}>Sök</button>
+      <Button text="Sök" onClick={handleSearchClick} />
       {filterColors().map((color, index) => (
         <div
           key={index}
