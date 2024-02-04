@@ -3,7 +3,7 @@ import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 import "./Styles/main.scss";
 import Home from "./Pages/Home";
 import Admin from "./Pages/Admin";
-import Search from "./Pages/Search";
+import Search from "./Pages/SearchPage";
 
 function App() {
   return (

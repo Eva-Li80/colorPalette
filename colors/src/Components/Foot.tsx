@@ -1,8 +1,5 @@
 import React from 'react'
-
-type FootProps = {
-    title: string;
-}
+import { FootProps } from '../Types_interfaces/types'
 
 const Foot = ({title}:FootProps) => {
   return (

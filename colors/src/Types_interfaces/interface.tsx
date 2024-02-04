@@ -5,3 +5,7 @@ export interface ColorData {
     url: string;
     thumbnailUrl: string;
 }
+
+export type FetchColorsProps = {
+    onColorsFetched: (colors: ColorData[]) => void;
+  };

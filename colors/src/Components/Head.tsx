@@ -1,13 +1,12 @@
 import React from 'react'
+import { HeadProps } from '../Types_interfaces/types'
 
-type HeadProps = {
-    title: string;
-}
 
-const Head = ({title}: HeadProps) => {
+const Head = ({title, subtitle}: HeadProps) => {
   return (
     <div className='head_container'>
-        <h1 className="title">{title}</h1>    
+        <h1 className="title">{title}</h1> 
+        <h3>{subtitle}</h3>   
     </div>
   )
 }
