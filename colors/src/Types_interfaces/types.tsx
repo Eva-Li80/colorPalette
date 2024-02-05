@@ -14,7 +14,7 @@ export type FootProps = {
 
 export type ButtonProps = {
     text: string;
-    onClick: () => void | boolean;
+    onClick?: () => void | boolean;
 }
 
 export type TextCardProps = {
