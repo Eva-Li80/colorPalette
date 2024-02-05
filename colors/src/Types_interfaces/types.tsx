@@ -17,6 +17,12 @@ export type ButtonProps = {
     onClick?: () => void | boolean;
 }
 
+export type ButtonPropsAdmin = {
+    text?: string;
+    onClick: () => void;
+    children?: React.ReactNode;
+}
+
 export type TextCardProps = {
     title: string;
     text: string;

@@ -1,11 +1,15 @@
 export interface ColorData {
-    id: number;
-    albumId: number;
-    title: string;
-    url: string;
-    thumbnailUrl: string;
+  id: number;
+  albumId: number;
+  title: string;
+  url: string;
+  thumbnailUrl: string;
 }
 
-export type FetchColorsProps = {
-    onColorsFetched: (colors: ColorData[]) => void;
-  };
+export interface FetchColorsProps {
+  onColorsFetched: (colors: ColorData[]) => void;
+}
+
+export interface Colors {
+  handleColors: (ColorData: ColorData) => void;
+}
