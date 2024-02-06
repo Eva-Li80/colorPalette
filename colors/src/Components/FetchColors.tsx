@@ -3,12 +3,13 @@ import axios from "axios";
 import { ColorData, FetchColorsProps } from "../Types_interfaces/interface";
 
 const api = import.meta.env.VITE_API_URL;
+const limit = "?_limit=3"
 
 const FetchColors = ({ onColorsFetched }: FetchColorsProps) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(api);
+      const response = await axios.get(`${api}${limit}`);
       const existingColors = response.data
         .filter(
           (color: ColorData) =>

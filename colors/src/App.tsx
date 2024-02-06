@@ -2,7 +2,7 @@ import { Routes, Route, BrowserRouter as Router} from "react-router-dom";
 
 import "./Styles/main.scss";
 import Home from "./Pages/Home";
-import Admin from "./Pages/Admin";
+import Admin from "./Pages/AdminPage";
 import Search from "./Pages/SearchPage";
 
 

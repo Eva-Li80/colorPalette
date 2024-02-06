@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface ColorData {
   id: number;
   albumId: number;
@@ -13,3 +15,16 @@ export interface FetchColorsProps {
 export interface Colors {
   handleColors: (ColorData: ColorData) => void;
 }
+
+export interface AddColors {
+  newColor: string;
+  setColors: React.Dispatch<React.SetStateAction<ColorData[]>>;
+  colors: ColorData[];
+}
+
+export interface RemoveColor {
+  id: number;
+  setColors: React.Dispatch<React.SetStateAction<ColorData[]>>;
+  colors: ColorData[];
+}
+
