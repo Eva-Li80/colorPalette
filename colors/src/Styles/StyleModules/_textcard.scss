@@ -1,21 +1,21 @@
-.texcard{
-    background-color: $color-green-light;
-    @include flexdirection(column);
-    border-bottom: 1px solid $color-green-darker;
-    border-top: 1px solid $color-green-darker;
-  
+.texcard {
+  background-color: $color-green-light;
+  @include flexdirection(column);
+  border-bottom: 1px solid $color-green-darker;
+  border-top: 1px solid $color-green-darker;
+  margin-bottom: 40px;
 
-    .textrubrik{
-        font-size: 2em;
-        font-weight: bold;
-        color: $color-green-darker;
-        padding: 20px;
-    }
+  .textrubrik {
+    font-size: 2em;
+    font-weight: bold;
+    color: $color-green-darker;
+    padding: 20px;
+  }
 
-    .text{
-        font-size: 1.5em;
-        color: $color-green-darker;
-        padding: 20px;
-        font-weight: bold;
-    }
+  .text {
+    font-size: 1.5em;
+    color: $color-green-darker;
+    padding: 20px;
+    font-weight: bold;
+  }
 }

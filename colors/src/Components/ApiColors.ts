@@ -9,6 +9,18 @@ const apiUrl = import.meta.env.VITE_API_URL;
 const apiUrlVia = import.meta.env.VITE_API_URL_VIA;
 const limit = "?_limit=10";
 
+
+export const getColors = async (): Promise<ColorData[]> => {
+  try {
+    const response = await axios.get<ColorData[]>(`${apiUrl}${limit}`);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
+
+
 export const addColor = async ({ newColor, setColors, colors }: AddColors) => {
   try {
     const response = await axios.post<ColorData>(apiUrl, {

@@ -3,7 +3,7 @@ import axios from "axios";
 import { ColorData, FetchColorsProps } from "../Types_interfaces/interface";
 
 const api = import.meta.env.VITE_API_URL;
-const limit = "?_limit=3"
+const limit = "?_limit=500"
 
 const FetchColors = ({ onColorsFetched }: FetchColorsProps) => {
 
