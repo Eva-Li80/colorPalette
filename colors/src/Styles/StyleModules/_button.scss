@@ -1,0 +1,12 @@
+.btn-container{
+  @include flexdirectionStandard();
+  margin: 20px 0;
+
+  .btn{
+    width: 150px;
+    height: 50px;
+    color: $color-white;
+    background-color: $color-green-darker;
+    cursor: pointer;
+  }
+}

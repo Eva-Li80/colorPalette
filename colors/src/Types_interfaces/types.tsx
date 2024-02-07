@@ -26,4 +26,5 @@ export type ButtonPropsAdmin = {
 export type TextCardProps = {
     title: string;
     text: string;
+    style?: React.CSSProperties;
 }

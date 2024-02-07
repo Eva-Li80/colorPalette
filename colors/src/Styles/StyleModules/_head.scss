@@ -1,10 +1,15 @@
 .head_container{
     background-color: $color-green;
-    @include flexdirectionStandard();
+    @include flexdirection(column);
     width: 100%;
     height: 15vh;
 
     .title{
         color: $color-white;
+    }
+    .subtitle{
+        margin-top: 10px;
+        color: $color-white;
+        font-size: 22px;
     }
 }
