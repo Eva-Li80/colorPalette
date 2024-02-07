@@ -4,6 +4,7 @@ import { ColorData } from '../Types_interfaces/interface'
 import SearchColor from '../Components/SearchColor'
 import Head from '../Components/Head'
 import Naven from '../Components/Naven'
+import AddColor from '../Components/addColor'
 
 const SearchPage = () => {
   const [colors, setColors] = useState<ColorData[]>([])
@@ -17,6 +18,7 @@ const SearchPage = () => {
       <Naven />
       <FetchColors onColorsFetched={handleColors} />
       <SearchColor colors={colors.map(color => color.toString())}/>
+      <AddColor />
       <ul>
         {colors.map((color) => (
           <li
