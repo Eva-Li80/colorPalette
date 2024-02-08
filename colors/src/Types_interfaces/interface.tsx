@@ -6,7 +6,7 @@ export interface ColorData {
   title: string;
   url: string;
   thumbnailUrl: string;
-  colorCode?: string;
+
 }
 
 export interface FetchColorsProps {
@@ -17,7 +17,7 @@ export interface Colors {
   handleColors: (ColorData: ColorData) => void;
 }
 
-export interface AddColors {
+export interface AddColors<T> {
   newColor: string;
   setColors: React.Dispatch<React.SetStateAction<ColorData[]>>;
   colors: ColorData[];
@@ -30,7 +30,10 @@ export interface RemoveColor {
   colors: ColorData[];
 }
 
-export interface SearchColorProps  {
+export interface UpdateColor {
+  id: number;
+  editedTitle: string;
   colors: ColorData[];
-  
+  setColors: React.Dispatch<React.SetStateAction<ColorData[]>>;
+  setEditedColorId: React.Dispatch<React.SetStateAction<number | null>>;
 }

@@ -4,7 +4,7 @@ import { ColorData } from '../Types_interfaces/interface'
 import SearchColor from '../Components/SearchColor'
 import Head from '../Components/Head'
 import Naven from '../Components/Naven'
-import AddColor from '../Components/addColor'
+import AddColor from '../Components/AddColor'
 
 const SearchPage = () => {
   const [colors, setColors] = useState<ColorData[]>([])
