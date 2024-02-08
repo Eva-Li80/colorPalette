@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Head from "../Components/Head";
 import Naven from "../Components/Naven";
 import FetchColors from "../Components/FetchColors";

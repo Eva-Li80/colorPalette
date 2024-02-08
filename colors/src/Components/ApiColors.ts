@@ -8,7 +8,7 @@ import axios from "axios";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const apiUrlVia = import.meta.env.VITE_API_URL_VIA;
-const limit = "?_limit=10";
+const limit = "?_limit=500";
 
 
 export const getColors = async (): Promise<ColorData[]> => {

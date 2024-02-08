@@ -1,0 +1,48 @@
+.admin-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 250px;
+    list-style: none;
+    padding: 0;
+    background-color: $color-gray-lighter;
+    border: 2px solid $color-green-darker;
+
+    .admin-item{
+      margin: 20px 0px 0px 75px;
+    }
+
+    .admin-img{
+        width: 80px;
+        height: 80px;
+        margin-right: 30px;
+    }
+
+    .admin-edit{
+        font-size: 20px;
+        margin-right: 30px;
+        cursor: pointer;
+    }
+
+    .admin-title{
+        font-size: 30px;
+    }
+
+    .admin-remove{
+        font-size: 20px;
+        padding: 5px;
+        margin-left: 30px;
+    }
+
+    .admin-input{
+        width: 200px;
+        height: 30px;
+        margin-right: 30px;
+    }
+
+    .admin-update{
+        font-size: 20px;
+        padding: 5px;
+        margin-left: 30px;
+    }
+   
+}

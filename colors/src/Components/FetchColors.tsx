@@ -5,7 +5,7 @@ import { ColorData, FetchColorsProps } from "../Types_interfaces/interface";
 const api = import.meta.env.VITE_API_URL;
 const limit = "?_limit=500"
 
-const FetchColors = ({ onColorsFetched }: FetchColorsProps) => {
+const FetchColors = ({ onColorsFetched }: FetchColorsProps) => { 
 
   const fetchData = async () => {
     try {
@@ -15,7 +15,7 @@ const FetchColors = ({ onColorsFetched }: FetchColorsProps) => {
           (color: ColorData) =>
             color.thumbnailUrl !== null && color.thumbnailUrl !== undefined
         )
-        .map((color: ColorData) => color.thumbnailUrl.split("/")[4]);
+        .map((color: ColorData) => color.thumbnailUrl.split("/")[4]); //för att få ut hexfärgen och kunna sätta den som bakgrundsfärg
       onColorsFetched(existingColors);
     } catch (error) {
       console.error(error);

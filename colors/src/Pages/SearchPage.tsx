@@ -19,7 +19,7 @@ const SearchPage = () => {
       <FetchColors onColorsFetched={handleColors} />
       <SearchColor colors={colors.map(color => color.toString())}/>
       <AddColor />
-      <ul>
+      <ul className='search-container'>
         {colors.map((color) => (
           <li
             key={color.id}

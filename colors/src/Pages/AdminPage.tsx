@@ -1,7 +1,10 @@
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ColorData } from "../Types_interfaces/interface";
 import { getColors, removeColor, updateColor } from "../Components/ApiColors";
+import Head from "../Components/Head";
+import Naven from "../Components/Naven";
+import TextCard from "../Components/TextCard";
 
 const AdminPage = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
@@ -32,46 +35,35 @@ const handleRemoveColor = async(id: number) => {
 
   return (
     <div>
-      <h2>Colors</h2>
-      <div>
+    <Head title={"Hej admin välkommen!"}/>
+    <Naven />
+    <TextCard title={"Vill du uppdatera titlarna på färgerna till svensk text? "} text={"Tex: accusamus beatae ad facilis cum similique qui sunt: Till : Grön"} />
+      <div className="admin-container">
         {colors.map((color: ColorData) => (
-          <div key={color.id} style={{ marginBottom: "10px" }}>
-            <div
-              style={{
-                width: "30px",
-                height: "30px",
-                backgroundColor: color.title,
-                display: "inline-block",
-                marginRight: "10px",
-              }}
-            ></div>
+          <div key={color.id} className="admin-item">
             <img
               src={color.thumbnailUrl}
               alt={color.title}
-              style={{ width: "30px", height: "30px" }}
+             className="admin-img"
             />
-            <span
-              style={{ position: "absolute", right: "5px", cursor: "pointer" }}
-              onClick={() => handleRemoveColor(color.id)}
-            >
-              x
-            </span>
-            <span
-              style={{ marginLeft: "5px", cursor: "pointer" }}
+             <span
+              className="admin-edit"
               onClick={() => setEditedColorId(color.id)}
             >
               ✎
             </span>
-
-            <span style={{ marginLeft: "5px" }}>
+            <span >
               {editedColorId === color.id ? (
                 <>
                 <input
                   type="text"
                   value={editedTitle}
                   onChange={(e) => setEditedTitle(e.target.value)} 
+                  className="admin-input"
                   />
-                  <button onClick={() => {
+                  <button
+                  className="admin-update"
+                  onClick={() => {
                     const updatedTitle = editedTitle.trim();
                     if (updatedTitle !== "") {
                       setEditedTitle("");
@@ -81,12 +73,18 @@ const handleRemoveColor = async(id: number) => {
                   </>
               ) : (
                 <span
-                  style={{ cursor: "pointer" }}
+                 className="admin-title"
                   onClick={() => setEditedColorId(color.id)}
                 >
-                  {color.title}
+                  Titel: {color.title}
                 </span>
               )}
+            </span>
+            <span
+             
+              onClick={() => handleRemoveColor(color.id)}
+            >
+              <button className="admin-remove">Ta bort färg</button>
             </span>
           </div>
         ))}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { ColorData } from "../Types_interfaces/interface";
 import { addColor, getColors, removeColor } from "./ApiColors";
 
@@ -28,9 +28,7 @@ const AddColor = () => {
 
   const handleRemoveColor = async(id: number) => {
    await removeColor({ id, setColors, colors });
-  }
-
- 
+  } 
 
   return (
     <div>

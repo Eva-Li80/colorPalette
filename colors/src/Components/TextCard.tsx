@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { TextCardProps } from '../Types_interfaces/types'
 
 const TextCard = ({title, text, style}: TextCardProps) => {
