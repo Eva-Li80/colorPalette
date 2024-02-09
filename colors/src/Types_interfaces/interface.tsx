@@ -37,3 +37,8 @@ export interface UpdateColor {
   setColors: React.Dispatch<React.SetStateAction<ColorData[]>>;
   setEditedColorId: React.Dispatch<React.SetStateAction<number | null>>;
 }
+
+export interface SearchColorProps {
+  onSearch: (color: string) => void;
+}
+

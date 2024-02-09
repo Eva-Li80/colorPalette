@@ -5,6 +5,7 @@ import { getColors } from "../Components/ApiColors";
 import Head from "../Components/Head";
 import Naven from "../Components/Naven";
 import Colors from "../Components/Colors";
+import TextCard from "../Components/TextCard";
 
 const SearchPage = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
@@ -26,10 +27,10 @@ const SearchPage = () => {
     <div>
       <Head title="Sök på olika färger och lägg till" />
       <Naven />
+      <TextCard title="sök och lägg till färger i din lista" text="kör på"/>
       <div></div>
       <div style={{ display: "flex", justifyContent: "space-around" }}>
         <div style={{display:"flex", justifyContent: "center", alignItems: "center", padding: 100}}>
-
           <Colors />
         </div>
         <div style={{display:"flex", justifyContent: "center", alignItems: "center",  padding: 100}}>

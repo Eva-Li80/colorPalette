@@ -14,10 +14,10 @@ const SearchColor = ({ onSearch }:SearchColorProps) => {
   };
 
   return (
-    <div>
+    <div className="searchcolor">
       <input
         type="text"
-        placeholder="Enter color..."
+        placeholder="skriv färgkoden..."
         value={searchColor}
         onChange={handleChange}
       />

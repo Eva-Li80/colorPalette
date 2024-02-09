@@ -57,6 +57,7 @@ const handleRemoveColor = async(id: number) => {
                 <>
                 <input
                   type="text"
+                  placeholder="Uppdateara titel"
                   value={editedTitle}
                   onChange={(e) => setEditedTitle(e.target.value)} 
                   className="admin-input"

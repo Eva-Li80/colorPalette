@@ -20,7 +20,7 @@ const Naven = () => {
             </li>
             <li className="nav_li">
               <Link to="/search" className="nav_link">
-                Sök
+                Sök / Lägg till
               </Link>
             </li>
             <li className="nav_li">

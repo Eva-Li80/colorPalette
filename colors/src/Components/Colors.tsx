@@ -33,11 +33,11 @@ const Colors = () => {
   };
 
   return (
-    <div>
+    <div className="color-container">
       <h2>Här kan du söka på olika färger</h2>
       {searchedColor && (
-        <div style={{ marginTop: "20px" }}>
-          <span>Searched Color: </span>
+        <div className="result" >
+          <span>Sök resultat.... </span>
           <div
             style={{
               width: "30px",
@@ -48,17 +48,18 @@ const Colors = () => {
             }}
           ></div>
           <img
+         
             src={searchedColor.url}
             alt="Searched Color"
-            style={{ width: "100px", height: "100px" }}
+            style={{ width: "100px", height: "100px", border: "1px solid black"}}
           />
-          <span>{searchedColor.title}</span>
+          <span><h3>Titel:</h3>{searchedColor.title}</span>
         </div>
       )}
       <SearchColor onSearch={handleSearch} />
-      <div>
+      <div className="colorlist">
         {colors.map((color: ColorData) => (
-          <div key={color.id} style={{ margin: 2 }}>
+          <div key={color.id} >
             <div
               style={{
                 width: "30px",

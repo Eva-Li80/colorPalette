@@ -31,17 +31,17 @@ const AddColor = () => {
   } 
 
   return (
-    <div>
+    <div className="add-container">
       <div>
         <h2>Här kan du lägga till färger</h2>
-        <div>
+        <div className="add-input">
           <input
             type="text"
-            placeholder="Enter color code"
+            placeholder="Skriv färgkoden"
             value={newColor}
             onChange={(e) => setNewColor(e.target.value)}
           />
-          <button onClick={handleAddColor}>Add Custom Color</button>
+          <button onClick={handleAddColor}>Lägg till</button>
         </div>
         <div>
           {colors.map((color: ColorData) => (
