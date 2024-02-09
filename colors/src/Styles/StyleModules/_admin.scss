@@ -8,41 +8,50 @@
     border: 2px solid $color-green-darker;
 
     .admin-item{
-      margin: 20px 0px 0px 75px;
+      margin: 30px 0px 0px 75px;
     }
 
     .admin-img{
         width: 80px;
         height: 80px;
         margin-right: 30px;
+       border: 2px solid $color-green-darker;
     }
 
     .admin-edit{
         font-size: 20px;
         margin-right: 30px;
         cursor: pointer;
+        color: $color-green-darker;
+        padding: 5px;
+        margin-bottom: 5px;
     }
 
     .admin-title{
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .admin-remove{
         font-size: 20px;
         padding: 5px;
         margin-left: 30px;
+        background-color: $color-green-darker;
+        color: $color-white;
     }
 
     .admin-input{
         width: 200px;
         height: 30px;
         margin-right: 30px;
+        padding-left: 10px;
     }
 
     .admin-update{
         font-size: 20px;
         padding: 5px;
         margin-left: 30px;
+        background-color: $color-green;
+        color: $color-white;
     }
    
 }
