@@ -1,36 +1,44 @@
-import { useState } from 'react'
-import FetchColors from '../Components/FetchColors'
-import { ColorData } from '../Types_interfaces/interface'
-import SearchColor from '../Components/SearchColor'
-import Head from '../Components/Head'
-import Naven from '../Components/Naven'
-import AddColor from '../Components/AddColor'
+import { useEffect, useState } from "react";
+import { ColorData } from "../Types_interfaces/interface";
+import AddColor from "../Components/AddColor";
+import { getColors } from "../Components/ApiColors";
+import Head from "../Components/Head";
+import Naven from "../Components/Naven";
+import Colors from "../Components/Colors";
 
 const SearchPage = () => {
-  const [colors, setColors] = useState<ColorData[]>([])
+  const [colors, setColors] = useState<ColorData[]>([]);
 
-  const handleColors = (colors: ColorData[]) => {
-    setColors(colors)}
-  
+  useEffect(() => {
+    fetchColors();
+  }, []);
+
+  const fetchColors = async () => {
+    try {
+      const colorsData = await getColors();
+      setColors(colorsData);
+    } catch (error) {
+      console.error("Error fetching colors:", error);
+    }
+  };
+
   return (
     <div>
-      <Head title="ColorPalette sök sida" subtitle='Sök på olika färger eller färgkombinationer' />
+      <Head title="Sök på olika färger och lägg till" />
       <Naven />
-      <FetchColors onColorsFetched={handleColors} />
-      <SearchColor colors={colors.map(color => color.toString())}/>
-      <AddColor />
-      <ul className='search-container'>
-        {colors.map((color) => (
-          <li
-            key={color.id}
-            className="colors"
-            style={{ backgroundColor: `#${color}` }}
-          ></li>
-        ))}
-      </ul>
-      
-    </div>
-  )
-}
+      <div></div>
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{display:"flex", justifyContent: "center", alignItems: "center", padding: 100}}>
 
-export default SearchPage
+          <Colors />
+        </div>
+        <div style={{display:"flex", justifyContent: "center", alignItems: "center",  padding: 100}}>
+          <AddColor />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchPage;
+

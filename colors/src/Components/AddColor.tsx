@@ -33,7 +33,7 @@ const AddColor = () => {
   return (
     <div>
       <div>
-        <h2>Colors</h2>
+        <h2>Här kan du lägga till färger</h2>
         <div>
           <input
             type="text"

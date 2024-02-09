@@ -6,6 +6,7 @@ const TextCard = ({title, text, style}: TextCardProps) => {
     <div className='texcard' style={style}>
         <h1 className='textrubrik'>{title}</h1>
         <p className='text'>{text}</p>
+        
     </div>
   )
 }

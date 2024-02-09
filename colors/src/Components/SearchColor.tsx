@@ -1,55 +1,27 @@
-import { useEffect, useState } from "react";
-import { SearchColorProps } from "../Types_interfaces/types";
-import Button from "./Button";
+import { useState } from "react";
+import { SearchColorProps } from "../Types_interfaces/interface";
 
 
-const SearchColor = ({ colors }: SearchColorProps) => {
-  const [searching, setSearching] = useState<string>("");
-  const [searchClicked, setSearchCliked] = useState<boolean>(false);
+const SearchColor = ({ onSearch }:SearchColorProps) => {
+  const [searchColor, setSearchColor] = useState<string>("");
 
-  const filterColors = () => {
-    if (searchClicked) {
-      return colors.filter((color) =>
-        color.toLowerCase().includes(searching.toLowerCase())
-      );
-    } else {
-      return [];
-    }
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchColor(event.target.value);
   };
 
-  const handleSearchClick = () => {
-    setSearchCliked(true);
+  const handleClick = () => {
+    onSearch(searchColor);
   };
-
-  useEffect(() => {
-    setSearchCliked(false);
-  }, [colors]);
 
   return (
     <div>
-      <div>
-        <input
-          type="text"
-          placeholder="Sök efter färg"
-          value={searching}
-          onChange={(e) => setSearching(e.target.value)}
-        />
-      </div>
-      <Button text="Sök" onClick={handleSearchClick} />
-      {filterColors().map((color, index) => (
-        <div
-          key={index}
-          style={{
-            width: "30px",
-            height: "30px",
-            backgroundColor: `#${color}`,
-            marginRight: "10px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        ></div>
-      ))}
+      <input
+        type="text"
+        placeholder="Enter color..."
+        value={searchColor}
+        onChange={handleChange}
+      />
+      <button onClick={handleClick}>Search</button>
     </div>
   );
 };
