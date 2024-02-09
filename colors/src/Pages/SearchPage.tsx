@@ -30,7 +30,7 @@ const SearchPage = () => {
       <Head title="Sök & lägg till i ColorPalette" />
       <Naven />
       <TextCard title="sök och lägg till färger i din lista" text="I menyn hittar du admin om du vill uppdatera färger mm."/>
-      <div style={{ display: "flex", justifyContent: "center"}}>
+      <div className="search-add" style={{ display: "flex", justifyContent: "center"}}>
         <div style={{display:"flex", justifyContent: "center", alignItems: "center", padding: 50}}>
           <Colors />
         </div>

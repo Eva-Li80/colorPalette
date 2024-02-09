@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SearchColorProps } from "../Types_interfaces/interface";
 
+//Komponent för att söka på färger
 
 const SearchColor = ({ onSearch }:SearchColorProps) => {
   const [searchColor, setSearchColor] = useState<string>("");

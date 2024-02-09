@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+//navigationskomponenten för att komma till de olika sidorna
 const Naven = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 

@@ -6,6 +6,8 @@ import Head from "../Components/Head";
 import Naven from "../Components/Naven";
 import TextCard from "../Components/TextCard";
 
+
+//Admin sidan
 const AdminPage = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
   const [editedColorId, setEditedColorId] = useState<number | null>(null);
