@@ -26,26 +26,30 @@ const AddColor = () => {
     setNewColorCode("");
   };
 
-  const handleRemoveColor = async(id: number) => {
-   await removeColor({ id, setColors, colors });
-  } 
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleAddColor();
+    }
+  };
 
   return (
     <div className="add-container">
       <div>
-        <h2>Här kan du lägga till färger</h2>
+        <h2 className="title">Lägg till färger</h2>
         <div className="add-input">
           <input
             type="text"
-            placeholder="Skriv färgkoden"
+            placeholder="Lägg till färgkoden"
             value={newColor}
             onChange={(e) => setNewColor(e.target.value)}
+            onKeyDown={handleKeyPress}
           />
           <button onClick={handleAddColor}>Lägg till</button>
         </div>
         <div>
           {colors.map((color: ColorData) => (
-            <div key={color.id} style={{margin: 2}}>
+            <div className="colorinfo">
               <div
                 style={{
                   width: "30px",
@@ -58,14 +62,11 @@ const AddColor = () => {
               <img
                 src={color.thumbnailUrl}
                 alt={color.title}
-                style={{ width: "30px", height: "30px", backgroundColor: `#${color}` }}
+                style={{ width: "50px", height: "50px", backgroundColor: `#${color}` }}
               />
             
-              <span style={{ marginLeft: "5px" }}>{color.thumbnailUrl.split("/")[4]}</span>
+              <span className="colorcode">{color.thumbnailUrl.split("/")[4]}</span>
               
-              <span style={{}} >
-                 <button onClick={() => handleRemoveColor(color.id)}>X</button>
-              </span>
             </div>
           ))}
         </div>

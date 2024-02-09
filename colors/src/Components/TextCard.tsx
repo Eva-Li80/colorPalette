@@ -1,14 +1,13 @@
+import { TextCardProps } from "../Types_interfaces/types";
 
-import { TextCardProps } from '../Types_interfaces/types'
-
-const TextCard = ({title, text, style}: TextCardProps) => {
+const TextCard = ({ title, text, style }: TextCardProps) => {
   return (
-    <div className='texcard' style={style}>
-        <h1 className='textrubrik'>{title}</h1>
-        <p className='text'>{text}</p>
-        
-    </div>
-  )
-}
+    <div className="texcard" style={style}>
+      <h1 className="textrubrik">{title}</h1>
 
-export default TextCard
+      <p className="text">{text}</p>
+    </div>
+  );
+};
+
+export default TextCard;

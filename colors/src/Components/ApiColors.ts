@@ -8,7 +8,7 @@ import axios from "axios";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 const apiUrlVia = import.meta.env.VITE_API_URL_VIA;
-const limit = "?_limit=15";
+const limit = "?_limit=25";
 
 
 export const getColors = async (): Promise<ColorData[]> => {
@@ -27,7 +27,7 @@ export const addColor = async ({ newColor, setColors, colors }: AddColors<string
       title: newColor,
       thumbnailUrl: `${apiUrlVia}/${newColor}`,
     });
-    setColors([...colors, response.data]);
+    setColors([ response.data, ...colors]);
   } catch (error) {
     console.error(error);
   }

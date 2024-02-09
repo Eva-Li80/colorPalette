@@ -24,16 +24,15 @@ const SearchPage = () => {
   };
 
   return (
-    <div>
-      <Head title="Sök på olika färger och lägg till" />
+    <div className="search-container">
+      <Head title="Sök & lägg till i ColorPalette" />
       <Naven />
-      <TextCard title="sök och lägg till färger i din lista" text="kör på"/>
-      <div></div>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <div style={{display:"flex", justifyContent: "center", alignItems: "center", padding: 100}}>
+      <TextCard title="sök och lägg till färger i din lista" text="I menyn hittar du admin om du vill uppdatera färger mm."/>
+      <div style={{ display: "flex", justifyContent: "center"}}>
+        <div style={{display:"flex", justifyContent: "center", alignItems: "center", padding: 50}}>
           <Colors />
         </div>
-        <div style={{display:"flex", justifyContent: "center", alignItems: "center",  padding: 100}}>
+        <div style={{display:"flex", justifyContent: "center", alignItems: "center",  padding: 50}}>
           <AddColor />
         </div>
       </div>

@@ -33,6 +33,12 @@ const handleRemoveColor = async(id: number) => {
   setEditedColorId(null);
  }
 
+ const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  if (e.key === "Enter") {
+  handleUpdateColor(editedColorId!);
+  }
+};
+
   return (
     <div>
     <Head title={"Hej admin välkommen!"}/>
@@ -61,6 +67,7 @@ const handleRemoveColor = async(id: number) => {
                   value={editedTitle}
                   onChange={(e) => setEditedTitle(e.target.value)} 
                   className="admin-input"
+                  onKeyDown={handleKeyPress}
                   />
                   <button
                   className="admin-update"

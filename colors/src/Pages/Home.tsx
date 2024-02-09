@@ -23,7 +23,7 @@ const Home = () => {
     <div>
       <Head title="Välkommen till ColorPalette" />
       <Naven />
-      <TextCard title="Här får du en överblick över dess olika färger" text="Du kan tex gå till söka & lägga till färg först :) "/>
+      <TextCard title="Överblick över dess olika färger" text="Sök & lägg till färg, tryck på starta."/>
       <Button text="Starta" onClick={handleGoToCreate} />
       <FetchColors onColorsFetched={handleColors} />
       <ul className="home_color">

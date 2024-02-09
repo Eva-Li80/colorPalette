@@ -34,7 +34,7 @@ const Colors = () => {
 
   return (
     <div className="color-container">
-      <h2>Här kan du söka på olika färger</h2>
+      <h2 className="title">Sök på olika färger</h2>
       {searchedColor && (
         <div className="result" >
           <span>Sök resultat.... </span>
@@ -59,7 +59,7 @@ const Colors = () => {
       <SearchColor onSearch={handleSearch} />
       <div className="colorlist">
         {colors.map((color: ColorData) => (
-          <div key={color.id} >
+          <div key={color.id} className="colorinfo" >
             <div
               style={{
                 width: "30px",
@@ -73,12 +73,12 @@ const Colors = () => {
               src={color.thumbnailUrl}
               alt={color.title}
               style={{
-                width: "30px",
-                height: "30px",
+                width: "50px",
+                height: "50px",
                 backgroundColor: color.url,
               }}
             />
-            <span style={{ marginLeft: "5px" }}>
+            <span className="colorcode">
               {color.thumbnailUrl.split("/")[4]}
             </span>
           </div>

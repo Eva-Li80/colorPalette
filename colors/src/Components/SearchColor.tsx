@@ -13,13 +13,20 @@ const SearchColor = ({ onSearch }:SearchColorProps) => {
     onSearch(searchColor);
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
     <div className="searchcolor">
       <input
         type="text"
-        placeholder="skriv färgkoden..."
+        placeholder="Sök på färgkoden..."
         value={searchColor}
         onChange={handleChange}
+        onKeyDown={handleKeyPress}
       />
       <button onClick={handleClick}>Search</button>
     </div>

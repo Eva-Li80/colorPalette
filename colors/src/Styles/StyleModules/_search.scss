@@ -1,4 +1,18 @@
 .search-container{
-    @include flexdirection(column);
-  
+
+    .btnhome {
+      
+        color: $color-white;
+        cursor: pointer;
+        margin-left: 10px;
+       
+
+       
+    }
+   
+}
+
+.btn-navigate{
+    cursor: pointer;
+    padding: 20px;
 }
