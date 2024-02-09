@@ -5,7 +5,12 @@ import { ColorData, FetchColorsProps } from "../Types_interfaces/interface";
 const api = import.meta.env.VITE_API_URL;
 const limit = "?_limit=500"
 
-const FetchColors = ({ onColorsFetched }: FetchColorsProps) => { 
+//skapade denna komponent från start för att hämta färgerna från API:et. Använder den bara på home-sidan. 
+//Den visar bara färgerna och har ingen annan funktionalitet.
+
+/*I övrigt har jag alla funktioner för apiet i ApiColrs.tsx file*/
+
+const FetchColors = ({ onColorsFetched }: FetchColorsProps) => {  
 
   const fetchData = async () => {
     try {
@@ -30,4 +35,6 @@ const FetchColors = ({ onColorsFetched }: FetchColorsProps) => {
 };
 
 export default FetchColors;
+
+
 

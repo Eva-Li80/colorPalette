@@ -1,6 +1,4 @@
-import React from 'react'
 import { ButtonProps } from '../Types_interfaces/types'
-
 
 const Button = ({text, onClick}: ButtonProps) => {
   return (

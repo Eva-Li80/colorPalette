@@ -7,6 +7,8 @@ import Naven from "../Components/Naven";
 import Colors from "../Components/Colors";
 import TextCard from "../Components/TextCard";
 
+
+//Sök sidan och lägg till färger
 const SearchPage = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
 

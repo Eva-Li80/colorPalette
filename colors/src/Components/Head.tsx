@@ -1,4 +1,3 @@
-import React from "react";
 import { HeadProps } from "../Types_interfaces/types";
 
 const Head = ({ title, subtitle }: HeadProps) => {
