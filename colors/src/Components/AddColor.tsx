@@ -48,7 +48,8 @@ const handleAddColor = async () => {
         </div>
         <div>
           {colors.map((color: ColorData) => (
-            <div className="colorinfo">
+            <div className="colorinfo"
+            key={color.id}>
               <div
                 style={{
                   width: "30px",
