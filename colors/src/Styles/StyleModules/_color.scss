@@ -1,74 +1,60 @@
-.color-container{
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    list-style: none;
-    padding: 0;
-    background-color: $color-gray-lighter;
+.color-container {
+  @include colorinfo();
+
+  .title {
+    @include title();
+  }
+
+  .result {
+    background-color: $color-white;
     border: 2px solid $color-green-darker;
-    margin: 0 40px;
-    padding: 50px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
-    .title{
-        color: $color-green-darker;
-        font-size: 30px;
+    .search-img {
+      width: 80px;
+      height: 80px;
+      margin-right: 30px;
+      border: 2px solid $color-green-darker;
     }
+  }
 
-    .result{
+  .colorlist {
+    margin: 15px;
+  }
 
-        background-color:$color-white;
-        border: 2px solid $color-green-darker;
-        padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+  .colorinfo {
+    margin: 20px;
+    font-size: 20px;
+  }
 
-        .search-img{
-            width: 80px;
-            height: 80px;
-            margin-right: 30px;
-            border: 2px solid $color-green-darker;
-        
-        }
-    }
- 
+  .colorcode {
+    margin: 20px;
+    font-size: 20px;
+  }
+}
 
-    .colorlist{
-     
-        margin: 15px;
-    }
+.searchcolor {
+  margin: 20px 0;
 
-    .colorinfo{
-        margin: 20px;
-        font-size: 20px;
-    }
-    
-    .colorcode{
-        margin: 20px;
-        font-size: 20px;
-    }
+  input {
+    @include input();
+  }
+
+  button {
+    @include button();
+  }
 }
 
 
 
-.searchcolor{
-   margin: 20px 0;
-
-    input{
-        width: 200px;
-        height: 40px;
-        margin-right: 30px;
-        padding-left: 10px;
+@media screen and (max-width: 1090px) {
+  .color-container {
+    button {
+      font-size: 15px;
+      margin-left: 0px;
+      margin-top: 10px;
     }
-
-    button{
-        font-size: 20px;
-        padding: 5px;
-        margin-left: 20px;
-        background-color: $color-green;
-        color: $color-white;
-        cursor: pointer;
-    }
+  }
 }

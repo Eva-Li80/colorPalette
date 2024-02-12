@@ -91,11 +91,13 @@ const handleRemoveColor = async(id: number) => {
               )}
             </span>
             <span
+          
              
               onClick={() => handleRemoveColor(color.id)}
             >
               <button className="admin-remove">Ta bort färg</button>
             </span>
+            <div  className="admin-remove-underline"></div>
           </div>
         ))}
       </div>

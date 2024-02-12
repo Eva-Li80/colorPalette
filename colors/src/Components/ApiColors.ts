@@ -6,9 +6,9 @@ import {
 } from "../Types_interfaces/interface";
 import axios from "axios";
 
-const apiUrl = import.meta.env.VITE_API_URL;
-const apiUrlVia = import.meta.env.VITE_API_URL_VIA;
-const limit = "?_limit=25";
+const apiUrl = import.meta.env.VITE_API_URL; //för att kunna hämta färgerna
+const apiUrlVia = import.meta.env.VITE_API_URL_VIA; //för att kunna hämta färgerna så att de visa på ett annat sätt
+const limit = "?_limit=25"; //för att kunna begränsa antalet färger som hämtas
 
 
 export const getColors = async (): Promise<ColorData[]> => {

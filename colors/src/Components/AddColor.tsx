@@ -1,6 +1,6 @@
 import  { useEffect, useState } from "react";
 import { ColorData } from "../Types_interfaces/interface";
-import { addColor, getColors, removeColor } from "./ApiColors";
+import { addColor, getColors } from "./ApiColors";
 
 const AddColor = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
@@ -20,12 +20,11 @@ const AddColor = () => {
   }
 }
 
-  const handleAddColor = async () => {
-    await addColor({ newColor, newColorCode, setColors, colors });
-    setNewColor("");
-    setNewColorCode("");
-  };
-
+const handleAddColor = async () => {
+  await addColor({ newColor, newColorCode, setColors, colors });
+  setNewColor("");
+  setNewColorCode("");
+};
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {

@@ -1,13 +1,62 @@
-@mixin flexdirectionStandard(){
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flexdirectionStandard() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin flexdirection($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+}
+
+@mixin button() {
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 20px;
+  background-color: $color-green;
+  color: $color-white;
+  cursor: pointer;
+}
+
+@mixin input() {
+  width: 200px;
+  height: 40px;
+  margin-right: 30px;
+  padding-left: 10px;
+}
+
+@mixin colorinfo() {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  list-style: none;
+  background-color: $color-gray-lighter;
+  border: 2px solid $color-green-darker;
+  margin: 0 20px;
+  padding: 30px;
+}
+
+@mixin title() {
+  color: $color-green-darker;
+  font-size: 30px;
+}
+
+@mixin texttitle() {
+  font-size: 2em;
+  font-weight: bold;
+  color: $color-green-darker;
+  padding: 20px;
+}
+
+@mixin text() {
+  font-size: 1.5em;
+  color: $color-green-darker;
+  padding: 20px;
+  font-weight: bold;
+}

@@ -5,17 +5,11 @@
   border-top: 1px solid $color-green-darker;
   margin-bottom: 40px;
 
-  .textrubrik {
-    font-size: 2em;
-    font-weight: bold;
-    color: $color-green-darker;
-    padding: 20px;
+  .texttitle {
+    @include texttitle();
   }
 
   .text {
-    font-size: 1.5em;
-    color: $color-green-darker;
-    padding: 20px;
-    font-weight: bold;
+   @include text();
   }
 }
