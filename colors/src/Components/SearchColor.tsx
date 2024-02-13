@@ -10,7 +10,12 @@ const SearchColor = ({ onSearch }:SearchColorProps) => {
     setSearchColor(event.target.value);
   };
 
+  //valideringen har jag hittat på nätet. Det kommer upp en alert om felaktig färgkod eller om det inte är en hexadecimalfärgkod som stämmer
   const handleClick = () => {
+    if (!searchColor || searchColor.length !== 6 || !/^[0-9A-F]{6}$/i.test(searchColor)) {
+      alert("Felaktig färgkod. Vänligen ange en giltig sexsiffrig hexadecimalfärgkod.");
+      return;
+    }
     onSearch(searchColor);
   };
 

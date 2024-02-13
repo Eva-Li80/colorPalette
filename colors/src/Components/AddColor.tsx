@@ -23,8 +23,13 @@ const AddColor = () => {
   }
 }
 
-//funktion för att lägga till färgerna
+//funktion för att lägga till färgerna och att färg finns annars kommer det upp en alert
 const handleAddColor = async () => {
+  if (!colors.find(color => color.thumbnailUrl.split("/")[4] === newColor)) {
+    alert("Ogiltig färg. Vänligen ange en giltig sexsiffrig hexadecimalfärgkod.");
+    return; 
+  }
+
   await addColor({ newColor, newColorCode, setColors, colors });
   setNewColor("");
   setNewColorCode("");
