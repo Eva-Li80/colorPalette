@@ -7,8 +7,12 @@ import TextCard from "../Components/TextCard";
 import Button from "../Components/Button";
 import { useNavigate } from "react-router-dom";
 
+/*Hemsidan visar färgerna och har en knapp för att gå till sök och lägg till sidan
+ Jag har valt att begränsa antalet färger som visas på det olika sidorna för att man inte ska
+behöva gå igenom massa färger ..*/
 
-//Hemsidan
+/*tar in head nav och textcard button och fetchcolors*/
+
 const Home = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
   const navigate = useNavigate();

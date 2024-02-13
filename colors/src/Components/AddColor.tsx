@@ -1,6 +1,8 @@
 import  { useEffect, useState } from "react";
 import { ColorData } from "../Types_interfaces/interface";
-import { addColor, getColors } from "./ApiColors";
+import { addColor, getColors } from "./ApiColors"; //importerar funktionerna från ApiColors.tsx
+
+//Komponent för att lägga till färger
 
 const AddColor = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
@@ -11,6 +13,7 @@ const AddColor = () => {
     getColorsData();
   },[]);
 
+  //funktion för att hämta färgerna
   const getColorsData = async () => {
   try {
     const colorfromApi = await getColors();
@@ -20,6 +23,7 @@ const AddColor = () => {
   }
 }
 
+//funktion för att lägga till färgerna
 const handleAddColor = async () => {
   await addColor({ newColor, newColorCode, setColors, colors });
   setNewColor("");
@@ -44,7 +48,7 @@ const handleAddColor = async () => {
             onChange={(e) => setNewColor(e.target.value)}
             onKeyDown={handleKeyPress}
           />
-          <button onClick={handleAddColor}>Lägg till</button>
+          <button className="add-btn" onClick={handleAddColor}>Lägg till</button>
         </div>
         <div>
           {colors.map((color: ColorData) => (

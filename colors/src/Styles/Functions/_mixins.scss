@@ -12,17 +12,29 @@
   flex-wrap: wrap;
 }
 
+@mixin flexdirectionColumn() {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+@mixin flexdirectionRow() {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;;
+}
+
 @mixin button() {
-  font-size: 20px;
+  font-size: 15px;
   padding: 5px;
-  margin-left: 20px;
+  margin-left: 10px;
   background-color: $color-green;
   color: $color-white;
   cursor: pointer;
 }
 
 @mixin input() {
-  width: 200px;
+  width: 150px;
   height: 40px;
   margin-right: 30px;
   padding-left: 10px;
@@ -30,11 +42,6 @@
 
 @mixin colorinfo() {
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
   list-style: none;
   background-color: $color-gray-lighter;
   border: 2px solid $color-green-darker;
@@ -59,4 +66,19 @@
   color: $color-green-darker;
   padding: 20px;
   font-weight: bold;
+}
+
+
+@mixin border() {
+  background-color: $color-gray-lighter;
+  border: 2px solid $color-green-darker;
+}
+
+@mixin buttons($color){
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 30px;
+  background-color: $color;
+  color: $color-white;
+  cursor: pointer;
 }

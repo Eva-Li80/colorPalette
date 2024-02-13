@@ -1,13 +1,15 @@
-
 import { useEffect, useState } from "react";
 import { ColorData } from "../Types_interfaces/interface";
-import { getColors, removeColor, updateColor } from "../Components/ApiColors";
+import { getColors, removeColor, updateColor } from "../Components/ApiColors"; //importerar funktionerna från ApiColors.tsx
 import Head from "../Components/Head";
 import Naven from "../Components/Naven";
 import TextCard from "../Components/TextCard";
 
 
-//Admin sidan
+//Admin sidan som är tänkt lite som den som äger sidan kan uppdatera färger mm. Men inte gjort något inloggningssystem.
+//Men nu kan vem som helst uppdatera färger mm.
+/*tar in head nav och textcard */
+
 const AdminPage = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
   const [editedColorId, setEditedColorId] = useState<number | null>(null);
@@ -91,8 +93,6 @@ const handleRemoveColor = async(id: number) => {
               )}
             </span>
             <span
-          
-             
               onClick={() => handleRemoveColor(color.id)}
             >
               <button className="admin-remove">Ta bort färg</button>

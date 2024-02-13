@@ -1,6 +1,6 @@
 .head_container{
+  @include flexdirection(column); 
     background-color: $color-green;
-    @include flexdirection(column);
     width: 100%;
     height: 15vh;
 

@@ -1,3 +1,5 @@
+
+// Types 
 export type HeadProps = {
     title: string;
     subtitle? : string

@@ -1,5 +1,6 @@
 import { HeadProps } from "../Types_interfaces/types";
 
+//Komponent för att visa en rubrik och en underrubrik
 const Head = ({ title, subtitle }: HeadProps) => {
   return (
     <div className="head_container">

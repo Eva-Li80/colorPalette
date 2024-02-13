@@ -1,8 +1,7 @@
 .texcard {
-  background-color: $color-green-light;
   @include flexdirection(column);
-  border-bottom: 1px solid $color-green-darker;
-  border-top: 1px solid $color-green-darker;
+  @include border();
+  background-color: $color-green-light; 
   margin-bottom: 40px;
 
   .texttitle {

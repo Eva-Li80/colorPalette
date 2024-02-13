@@ -4,13 +4,14 @@ import {
   RemoveColor,
   UpdateColor,
 } from "../Types_interfaces/interface";
-import axios from "axios";
+import axios from "axios"; //för att hantera HTTP-requests get, post, put, delete asynkront
 
 const apiUrl = import.meta.env.VITE_API_URL; //för att kunna hämta färgerna
-const apiUrlVia = import.meta.env.VITE_API_URL_VIA; //för att kunna hämta färgerna så att de visa på ett annat sätt
+const apiUrlVia = import.meta.env.VITE_API_URL_VIA; //för att visa färgerna på ett bra sätt när man lägger till färg
 const limit = "?_limit=25"; //för att kunna begränsa antalet färger som hämtas
 
 
+//funktion för att hämta färgerna
 export const getColors = async (): Promise<ColorData[]> => {
   try {
     const response = await axios.get<ColorData[]>(`${apiUrl}${limit}`);
@@ -21,6 +22,7 @@ export const getColors = async (): Promise<ColorData[]> => {
   }
 }
 
+//funktion för att lägga till färg
 export const addColor = async ({ newColor, setColors, colors }: AddColors<string>) => {
   try {
     const response = await axios.post<ColorData>(apiUrl, {
@@ -33,6 +35,7 @@ export const addColor = async ({ newColor, setColors, colors }: AddColors<string
   }
 };
 
+//funktion för att ta bort färg
 export const removeColor = async ({ id, setColors, colors }: RemoveColor) => {
   try {
     await axios.delete(`${apiUrl}/${id}`);
@@ -43,6 +46,7 @@ export const removeColor = async ({ id, setColors, colors }: RemoveColor) => {
   }
 };
 
+//funktion för att uppdatera färg
 export const updateColor = async ({id, editedTitle, colors, setColors, setEditedColorId}: UpdateColor) => {
   try {
     await axios.put(`${apiUrl}/${id}`, {

@@ -1,5 +1,6 @@
 import { ButtonProps } from '../Types_interfaces/types'
 
+//Komponent för att visa en knapp
 const Button = ({text, onClick}: ButtonProps) => {
   return (
     <div className='btn-container'>

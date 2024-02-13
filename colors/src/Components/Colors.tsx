@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { ColorData } from "../Types_interfaces/interface";
-import { getColors } from "./ApiColors";
+import { getColors } from "./ApiColors"; //importerar getcolors från ApiColors.tsx
 import SearchColor from "./SearchColor";
 
+//hämtar färgerna från API:et och visar dem i en lista. samt tar in SearchColor komponenten för att kunna söka på färger
 const Colors = () => {
   const [colors, setColors] = useState<ColorData[]>([]);
   const [searchedColor, setSearchedColor] = useState<ColorData | null>(null);
@@ -11,6 +12,7 @@ const Colors = () => {
     getColorsData();
   }, []);
 
+  //funktion för att hämta färgerna
   const getColorsData = async () => {
     try {
       const colorfromApi = await getColors();
@@ -20,6 +22,7 @@ const Colors = () => {
     }
   };
 
+  //funktion för att söka på färger
   const handleSearch = (search: string) => {
     const lowerCase = search.toLowerCase();
     const foundColor = colors.find((color) =>

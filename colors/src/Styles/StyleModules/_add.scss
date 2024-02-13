@@ -1,40 +1,53 @@
 .add-container {
- @include colorinfo();
+  @include colorinfo();
+  @include flexdirectionColumn();
 
   .title {
     @include title();
-  } 
+  }
 
-  
-  .colorinfo{
+  .colorinfo {
     margin: 20px;
     font-size: 20px;
-}
+  }
 
-.colorcode{
+  .colorcode {
     margin: 20px;
     font-size: 20px;
-}
+  }
 
   .add-input {
     margin: 20px 0;
 
-    input{
-       @include input();
+    input {
+      @include input();
     }
 
-    button{
-        @include button();
+    button {
+      @include button();
     }
   }
 }
 
-
-
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 925px) {
   .add-container {
-    button {
-      font-size: 15px;
+    @include flexdirectionRow();
+
+    .add-input .add-btn {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
+    .colorcode {
+      margin-left: 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .add-container {
+    @include flexdirectionRow();
+    .add-input .add-btn {
       margin-left: 0px;
       margin-top: 10px;
     }

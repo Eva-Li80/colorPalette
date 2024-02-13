@@ -1,21 +1,19 @@
 .home_color {
+  @include border(); 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   padding: 0;
-  background-color: $color-gray-lighter;
-  border: 2px solid $color-green-darker;
   margin: 0 40px;
   padding: 10px;
   
   .colors {
+    @include border();
     width: 60px;
     height: 60px;
-    border: 2px solid $color-green;
     border-radius: 20%;
     margin: 5px;
-    background-color: #ffffff;
     padding: 10px;
   }
 }
