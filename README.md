@@ -1,4 +1,4 @@
-# ColorPalette
+# Name: ColorPalette
 
 <!--För att starta projektet-->
 # start Projekt
